@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  --cui-body-font-family: ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+@keyframes from-left {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes from-right {
+  from {
+    transform: translateX(50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.card:nth-of-type(2n - 1) {
+  animation: from-left 0.2s ease-in;
+  transition: all 0.5s;
+}
+
+.card:nth-of-type(2n) {
+  animation: from-right 0.2s ease-in;
+  transition: all 0.5s;
+}
+
+.card:hover {
+  scale: 1.05;
+}
+
+@media (max-width: 700px) {
+  .card-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-container img {
+    width: 80% !important;
+  }
+
+  .main-container p {
+    width: 80% !important;
+    font-size: 0.8rem;
+  }
+}
+
+html,
+body {
+  width: 100%;
+}
